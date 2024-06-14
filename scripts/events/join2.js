@@ -56,7 +56,7 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
     fs.writeFileSync(gifPath, response.data);
   if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
     api.changeNickname(`[ ${global.config.PREFIX} ] • ➠${(!global.config.BOTNAME) ? "bot" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
-    return api.sendMessage("", event.threadID, () => api.sendMessage({ body: `${global.config.BOTNAME} CONNECTED«\n\nAssalamualaykum☘️
+    return api.sendMessage("চলে এসেছি আমি  তোমাদের  জামাই রাজ টা 🤭!", event.threadID, () => api.sendMessage({ body: `${global.config.BOTNAME} CONNECTED«\n\nAssalamualaykum☘️
 <------------------------------>  
 BOT CONNECTED SUCCESFUL !!! 
 
@@ -80,6 +80,104 @@ ADMIN :Md Raj
     console.error(error);
 });
   }
+  else {
+    try {
+      if (!fs.existsSync(__dirname + ``)) {
+        let getfont = (await axios.get(fontlink, { responseType: "arraybuffer" })).data;
+        fs.writeFileSync(__dirname + ``, Buffer.from(getfont, "utf-8"));
+      };
+      const { createReadStream, existsSync, mkdirSync, readdirSync } = global.nodemodule["fs-extra"];
+      let { threadName, participantIDs } = await api.getThreadInfo(threadID);
+      const threadData = global.data.threadData.get(parseInt(threadID)) || {};
+      var mentions = [], nameArray = [], memLength = [], iduser = [], i = 0;
+      var abx = [];
+      for (id in event.logMessageData.addedParticipants) {
+        const userName = event.logMessageData.addedParticipants[id].fullName; iduser.push(event.logMessageData.addedParticipants[id].userFbId.toString());
+        nameArray.push(userName);
+        mentions.push({ tag: userName, id: event.senderID });
+        memLength.push(participantIDs.length - i++);
+        console.log(userName)
+      }
+      // console.log(event.logMessageData.addedParticipants)
+      var id = [];
+      for (let o = 0; o < event.logMessageData.addedParticipants.length; o++) {
+        let pathImg = __dirname + ``;
+        let pathAva = __dirname + ``;
+        let avtAnime = (await axios.get(encodeURI(
+          ``), { responseType: "arraybuffer" })).data;
+        var ok = [
+          ''
+        ]
+        let background = (await axios.get(encodeURI(`${ok[Math.floor(Math.random() * ok.length)]}`), { responseType: "arraybuffer", })).data;
+        fs.writeFileSync(pathAva, Buffer.from(avtAnime, "utf-8"));
+        fs.writeFileSync(pathImg, Buffer.from(background, "utf-8"));
+        var avatar = await this.circle(pathAva);
+        let baseImage = await loadImage(pathImg);
+        let baseAva = await loadImage(avatar);
+        registerFont(__dirname + ``, {
+          family: "Semi"
+        });
+        let canvas = createCanvas(1902, 1082);
+        console.log(canvas.width, canvas.height)
+        let ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(baseImage, 0, 0, canvas.width, canvas.height);
+        ctx.drawImage(baseAva, canvas.width / 2 - 188, canvas.height / 2 - 375, 375, 355);
+        ctx.fillStyle = "#FFF";
+        ctx.textAlign = "center";
+        ctx.font = `155px Semi`;
+        ctx.fillText(``, canvas.width / 2 + 20, canvas.height / 2 + 100);
+        ctx.save();
+        ctx.font = `75px Semi`;
+        ctx.fillText(``, canvas.width / 2 - 15, canvas.height / 2 + 235)
+        const number = participantIDs.length - o;
+
+        if (number === 11 || number === 12 || number === 13) {
+          suffix = "th";
+        } else {
+          const lastDigit = number % 10;
+          switch (lastDigit) {
+            case 1:
+              suffix = "st";
+              break;
+            case 2:
+              suffix = "nd";
+              break;
+            case 3:
+              suffix = "rd";
+              break;
+            default:
+              suffix = "th";
+              break;
+          }
+        }
+
+        ctx.fillText(``, canvas.width / 2 - 15, canvas.height / 2 + 350);
+        ctx.restore();
+        const imageBuffer = canvas.toBuffer();
+        fs.writeFileSync(pathImg, imageBuffer);
+        abx.push(fs.createReadStream(__dirname + `/Nayan/join/${o}.png`))
+      }
+      memLength.sort((a, b) => a - b);
+      (typeof threadData.customJoin == "undefined") ? msg = `` : msg = threadData.customJoin;
+      var nameAuthor = await Users.getNameUser(event.author)
+      msg = msg
+        .replace(/\{iduser}/g, iduser.join(', '))
+        .replace(/\{name}/g, nameArray.join(', '))
+        .replace(/\{type}/g, (memLength.length > 1) ? 'You' : 'You')
+        .replace(/\{soThanhVien}/g, memLength.join(', '))
+        .replace(/\{threadName}/g, threadName)
+        .replace(/\{author}/g, nameAuthor)
+        .replace(/\{uidAuthor}/g, event.author)
+        .replace(/\{buoi}/g, session)
+        .replace(/\{time}/g, time)
+        .replace(/\{thu}/g, thu);
+
+      var formPush = { body: msg, attachment: abx, mentions }
+      api.sendMessage(formPush, threadID);
+      for (let ii = 0; ii < parseInt(id.length); ii++) {
+        fs.unlinkSync(__dirname + `/Nayan/join/${ii}.png`)
+      }
     } catch (e) { return console.log(e) };
   }
 }
