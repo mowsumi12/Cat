@@ -6,7 +6,7 @@ const fs = require("fs");
 
 module.exports.config = {
 
-name: "su",
+name: "ns",
 
 version: "1.0.0",
 
