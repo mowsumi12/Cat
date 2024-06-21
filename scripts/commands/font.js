@@ -138,7 +138,7 @@ module.exports.run = async ({ event, api, args }) => {
 
   if (args.length === 0) {
     return api.sendMessage(
-      '✨ Available Fonts Style ✨\n✇━━━━━━━━━━━━━━━━━━━✇\n1 - 𝓑𝓞𝓚𝓚𝓞𝓡 | 𝓫𝓸𝓴𝓴𝓸𝓻\n2 - 𝔹𝕆𝕂𝕂𝕆ℝ | 𝕓𝕠𝕜𝕜𝕠𝕣\n3 - 𝗕𝗢𝗞𝗞𝗢𝗥 | 𝗯𝗼𝗸𝗸𝗼𝗿\n4 - 𝑩𝑶𝑲𝑲𝑶𝑹 | 𝑏𝒐𝒌𝒌𝒐𝒓\n 5 - 𝔅𝔒𝔎𝔎𝔒ℜ | 𝔟𝔬𝔨𝔨𝔬𝔯\n6 - BOKKOR | ʙᴏᴋᴋᴏʀ\n7 - 🅱🅾🅺🅺🅾🆁\n8 - 🅑🅞🅚🅚🅞🅡\n9 - 𝐁𝐎𝐊𝐊𝐎𝐑 | 𝐛𝐨𝐤𝐤𝐨𝐫\n10 -  | 𝙱𝙾𝙺𝙺𝙾𝚁\n𒄬 Example : -font 1 BOKKOR/bokkor',
+      '✨ 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐅𝐨𝐧𝐭𝐬 𝐒𝐭𝐚𝐲𝐥𝐞 ✨\n✇━━━━━━━━━━━━━━━✇\n𝟏 - 𝓝𝓐𝓩𝓡𝓤𝓛 /𝓷𝓪𝔃𝓻𝓾𝓵\n𝟐 - ℕ𝔸ℤℝ𝕌𝕃 𝕟𝕒𝕫𝕣𝕦𝕝\n𝟑 - 𝗡𝗔𝗭𝗥𝗨𝗟 | 𝗻𝗮𝘇𝗿𝘂𝗹\n𝟒 - 𝑵𝑨𝒁𝑹𝑼𝑳 | 𝒏𝑎𝒛𝒓𝒖𝒍\n 𝟓 - 𝔑𝔄ℨℜ𝔘𝔏 | 𝔫𝔞𝔷𝔯𝔲𝔩\n𝟔 - NAZRUL | ɴᴀᴢʀᴜʟ\n𝟕 - 🅽🅰🆉🆁🆄🅻 \n𝟖 -🅝🅐🅩🅡🅤🅛\n𝟗 - 𝐍𝐀𝐙𝐑𝐔𝐋 | 𝐧𝐚𝐳𝐫𝐮𝐥\n𝟏𝟎 -𝙽𝙰𝚉𝚁𝚄𝙻 | 𝚗𝚊𝚣𝚛𝚞𝚕\nEx:-font 1 NAZRUL/nazrul',
       event.threadID,
       event.messageID
     );
