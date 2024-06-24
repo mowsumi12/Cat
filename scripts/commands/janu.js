@@ -3,6 +3,7 @@ module.exports.config = {
     version: '1.1.1',
     permssion: 0,
     credits: 'Islamick Cyber Chat',
+    prefix: true,
     description: 'use Jane for Funny Masage',
     category: 'janu',
     usages: 'janu',
