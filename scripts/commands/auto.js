@@ -1,6 +1,6 @@
 module.exports = {
   config:{
-    name: "auto",
+    name: "auto12",
     version: "0.0.2",
     permission: 0,
     prefix: 'awto',
