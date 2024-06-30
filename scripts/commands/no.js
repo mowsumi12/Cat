@@ -4,7 +4,7 @@ module.exports.config = {
     version: "1.0.1",
   permission: 0,
   credits: "nazrul",
-  
+  prefix: true, 
   description: "hihihihi",
   category: "nazrul",
   usages: "nazrul",
