@@ -16,7 +16,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   if (event.body.indexOf("🥲")==0 || event.body.indexOf("🥲")==0 || event.body.indexOf("🥲")==0 || event.body.indexOf("🥲")==0) {
     var msg = {
         body: "-কারো মনে জায়গা পাই আর না পাই -!!🙂🥀\nকবরস্থানে একদিন ঠিকই জায়গা হয়ে যাবে ইনশাআল্লাহ্ ❞!🥲😔\n===== 𝐍𝐀𝐙𝐑𝐔𝐋 𝐁𝐎𝐓 =====",
-        attachment: fs.createReadStream(__dirname + `/nazrul/nazrul3.mp3`)
+        attachment: fs.createReadStream(__dirname + `/noprefix/nazrul3.mp3`)
       }
       api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("🥲", event.messageID, (err) => {}, true)
