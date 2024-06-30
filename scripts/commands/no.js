@@ -1,10 +1,10 @@
 const fs = require("fs");
 module.exports.config = {
 	name: "🌚",
-    version: "1.0.1",
+        version: "1.0.1",
 	permission: 0,
 	credits: "nazrul", 
- prefix: true, 
+        prefix: "noprefix", 
 	description: "hihihihi",
 	category: "no prefix",
 	usages: "😱",
