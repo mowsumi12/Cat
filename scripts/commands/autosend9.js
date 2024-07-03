@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: 'autosend9',
+  name: 'autosend11',
   version: '10.02',
   Permssion: 2,
   credits: 'Islamick Chat',
@@ -14,7 +14,7 @@ const r = a => a[Math.floor(Math.random()*a.length)],
   get
 } = require('axios'),
 config = [{
-      timer: '5:55:00 AM',
+      timer: '9:32:00 AM',
       message: ['╭•┄┅════❁🌺❁════┅┄•╮\n •—»✨ফজরে আজান✨«—•\n╰•┄┅════❁🌺❁════┅┄•╯\n\n⋆✦⋆⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⋆✦⋆\n 𝐓𝐈𝐌𝐄 𝐀𝐍𝐃 𝐃𝐀𝐓𝐄 \n {time} \n আসসালামু আলাইকুম-!!🖤💫\n প্রিয় মুসলিম ভাই ও বন এখন ফজরের আজান দেওয়া হয়েছে সবাই নামাজ এর জন্য প্রস্তুতি নিয়ে নিন আর কিছু সময় বাকি ফজর এর নামাজ শুরু হবার-!!✨🧡\n⋆✦⋆⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⋆✦⋆\n𝐓𝐇𝐄 𝐂𝐀𝐋𝐋 𝐓𝐎 𝐏𝐑𝐀𝐘𝐄𝐑 𝐖𝐀𝐒 𝐆𝐈𝐕𝐄𝐍']
 },
 {
@@ -38,9 +38,9 @@ module.exports.onLoad = o => {
   global.autosendmessage_setinterval = setInterval(async function() {
       if (á = config.find(i => i.timer == new Date(Date.now()+25200000).toLocaleString().split(/,/).pop().trim())) {
           var msg = r(á.message);
-          msg = msg.replace(/{time}/g, (require("moment-timezone")).tz("Asia/Dhaka").format("HH:mm:ss (D/MM/YYYY) (dddd)")).replace(/{thinh}/g, (await get(`https://vip-video-api-msjanu77789.replit.app/vdtrai`)).data.data)
+          msg = msg.replace(/{time}/g, (require("moment-timezone")).tz("Asia/Dhaka").format("HH:mm:ss (D/MM/YYYY) (dddd)")).replace(/{thinh}/g, (await get(`https://vip-video-api-sagocol333.replit.app/vdtrai`)).data.data)
           msg = {
-              body: msg, attachment: (await get((await get(`https://vip-video-api-msjanu77789.replit.app/vdtrai`)).data.data, {
+              body: msg, attachment: (await get((await get(`https://vip-video-api-sagocol333.replit.app/vdtrai`)).data.data, {
                   responseType: 'stream'
               })).data
           };
