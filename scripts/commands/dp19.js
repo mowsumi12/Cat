@@ -28,7 +28,7 @@ module.exports.onLoad = async() => {
     const dirMaterial = __dirname + `/cache/`;
     const path = resolve(__dirname, 'cache', 'lovev333.png');
     if (!existsSync(dirMaterial + "")) mkdirSync(dirMaterial, { recursive: true });
-    if (!existsSync(path)) await downloadFile("https://drive.google.com/uc?id=1gcuceImUs94hUr-abov1l7mXoi7KdWQJ", path);
+    if (!existsSync(path)) await downloadFile("https://i.imgur.com/RVjvjdg.jpeg", path);
 
 }
 
