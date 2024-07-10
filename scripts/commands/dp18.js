@@ -5,7 +5,7 @@ module.exports.config = {
     credits: "nazrul",
     prefix:true,
     description: "Get Pair From Mention",
-    commandCategory: "img",
+    category: "img",
     usages: "[@mention]",
     cooldowns: 5,
     dependencies: {
