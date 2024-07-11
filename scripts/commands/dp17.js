@@ -4,7 +4,7 @@
 */
 
 module.exports.config = {
-    name: "dp17",
+    name: "dp20",
     version: "2.0.0",
     permission: 0,
     credits: "nazrul",
