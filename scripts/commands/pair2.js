@@ -1,10 +1,11 @@
 module.exports.config = {
   name: "pair2",
   version: "1.0.0",
-  hasPermssion: 0,
+  permission: 0,
   credits: "Nazrul",
+  prefix: true,
   description: "It's a compound :>",
-  commandCategory: "fun",
+  category: "fun",
   usages: "",
   dependencies: {
         "axios": "",
