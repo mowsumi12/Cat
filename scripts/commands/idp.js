@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "idp",
+  name: "pair4",
   version: "1.0.0",
   permission: 0,
   credits: "nazrul",
@@ -99,7 +99,7 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
   fs.writeFileSync(pathImg, imageBuffer);
   fs.removeSync(pathAvt1);
   fs.removeSync(pathAvt2);
-  return api.sendMessage({ body: `𝐂𝐎𝐍𝐆𝐑𝐀𝐓𝐔𝐋𝐀𝐓𝐈𝐎𝐍𝐒\n━━━━━━━━━━━━━━━━\n ${name1} ━━━━━━━━━━━━━━━━\n𝐒𝐔𝐂𝐂𝐄𝐒𝐒𝐅𝐔𝐋𝐋𝐘 \n🆂🅴🅲🆁🅴🆃 𝐋𝐎𝐕𝐄 𝐖𝐈𝐓𝐇 \n━━━━━━━━━━━━\n${name2}\n━━━━━━━━━━━━━━━━\n${tile}%\n━━━━━━━━━━━━━━━━\n★᭄`,
+  return api.sendMessage({ body: `𝐂𝐎𝐍𝐆𝐑𝐀𝐓𝐔𝐋𝐀𝐓𝐈𝐎𝐍𝐒\n━━━━━━━━━━━━━━━━\nআসসালামু আলাইকুম, \n${name1}\n𝐋𝐎𝐕𝐄 𝐖𝐈𝐓𝐇\n${name2}\nআই  ${tile}% লাব ইউ \n𝐂𝐫𝐞𝐚𝐭𝐨𝐫 ━➢ 𝐈𝐬𝐥𝐦𝐚𝐢𝐜𝐤 𝐂𝐡𝐚𝐭`,
             mentions: [{
           tag: `${name2}`,
           id: id2
